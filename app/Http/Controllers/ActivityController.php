@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use Illuminate\Http\Request;
 
 class ActivityController extends Controller
@@ -11,7 +12,8 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        return "List of activitys";
+        $activities = Activity::with('user')->get();
+        return response()->json($activities);
     }
 
     /**
@@ -19,7 +21,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return "Form to create an activity";
+
     }
 
     /**
@@ -27,7 +29,23 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        return "Save new activity";
+        $validatedData = $request->validate([
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air ballon',
+            'user_id' => 'required|exists:users,id',
+            'datetime' => 'required|date',
+            'paid' => 'required|boolean',
+            'notes' => 'required|string',
+            'satisfaction' => 'nullable|integer|min:0|max:10',
+        ]);
+    
+        $activity = Activity::create($validatedData);
+    
+        $activityWithUser = Activity::with('user')->find($activity->id);
+    
+        return response()->json([
+            'message'  => 'Activity created',
+            'activity' => $activityWithUser
+        ], 201);
     }
 
     /**
@@ -35,7 +53,8 @@ class ActivityController extends Controller
      */
     public function show($id)
     {
-        return "Showing activity with ID: $id";
+        $activity = Auth::user()->activities()->findOrFail($id);
+        return response()->json($activity);
     }
 
     /**
@@ -43,7 +62,7 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        return "Form to edit the activity with ID: $id";
+        return response()->json(['message' => "Formulario de edición para la actividad $id"]);
     }
 
     /**
@@ -51,7 +70,19 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return "Update activity with ID: $id";
+        $activity = Auth::user()->activities()->findOrFail($id);
+
+        $validated = $request->validate([
+            'type' => 'in:surf,windsurf,kayak,atv,hot air balloon',
+            'datetime' => 'date',
+            'paid' => 'boolean',
+            'notes' => 'nullable|string',
+            'satisfaction' => 'nullable|integer|min:1|max:5',
+        ]);
+
+        $activity->update($validated);
+
+        return response()->json($activity);
     }
 
     /**
@@ -59,6 +90,9 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        return "Destroy activity with ID: $id";
+        $activity = Auth::user()->activities()->findOrFail($id);
+        $activity->delete();
+
+        return response()->json(['message' => 'Activity destroyed']);
     }
 }
