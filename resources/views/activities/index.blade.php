@@ -7,9 +7,6 @@
 </head>
 <body>
     <ul>
-        @extends('layouts.app')
-
-        @section('content')
             <div class="container">
                 <h1>Lista de Actividades</h1>
 
@@ -22,7 +19,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Type</th>
-                            <th>User</th>
+                            <th>User ID</th>
+                            <th>User email</th>
                             <th>Date</th>
                             <th>Paid</th>
                             <th>Satisfaction</th>
@@ -33,16 +31,17 @@
                             <tr>
                                 <td>{{ $activity->id }}</td>
                                 <td>{{ $activity->type }}</td>
-                                <td>{{ $activity->user->name ?? 'N/A' }}</td>
+                                <td>{{ $activity->user_id }}</td>
+                                <td>{{ $activity->user->email ?? 'N/A' }}</td>
                                 <td>{{ $activity->datetime }}</td>
-                                <td>{{ $activity->paid ? 'Sí' : 'No' }}</td>
+                                <td>{{ $activity->paid ? 'Yes' : 'No' }}</td>
                                 <td>{{ $activity->satisfaction ?? 'Unqualified ' }}</td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
-        @endsection
+
     </ul>
 </body>
 </html>
