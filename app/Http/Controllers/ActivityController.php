@@ -53,7 +53,7 @@ class ActivityController extends Controller
      */
     public function show($id)
     {
-        $activity = Auth::user()->activities()->findOrFail($id);
+        $activity = Activity::with('user')->findOrFail($id);
         return response()->json($activity);
     }
 
