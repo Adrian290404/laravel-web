@@ -70,19 +70,25 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $activity = Auth::user()->activities()->findOrFail($id);
-
-        $validated = $request->validate([
-            'type' => 'in:surf,windsurf,kayak,atv,hot air balloon',
-            'datetime' => 'date',
-            'paid' => 'boolean',
-            'notes' => 'nullable|string',
-            'satisfaction' => 'nullable|integer|min:1|max:5',
+        $validatedData = $request->validate([
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air ballon',
+            'user_id' => 'required|exists:users,id',
+            'datetime' => 'required|date',
+            'paid' => 'required|boolean',
+            'notes' => 'required|string',
+            'satisfaction' => 'nullable|integer|min:0|max:10',
         ]);
-
-        $activity->update($validated);
-
-        return response()->json($activity);
+    
+        $activity = Activity::findOrFail($id);
+    
+        $activity->update($validatedData);
+    
+        $activityWithUser = Activity::with('user')->find($activity->id);
+    
+        return response()->json([
+            'message'  => 'Activity updated',
+            'activity' => $activityWithUser
+        ], 200);
     }
 
     /**
