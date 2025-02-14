@@ -13,7 +13,8 @@ class ActivityController extends Controller
     public function index()
     {
         $activities = Activity::with('user')->get();
-        return response()->json($activities);
+        // return response()->json($activities);
+        return view('activities.index', compact('activities'));
     }
 
     /**
