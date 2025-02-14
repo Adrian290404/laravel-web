@@ -21,7 +21,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-
+        // I don't know what to do here
     }
 
     /**
@@ -45,7 +45,7 @@ class ActivityController extends Controller
         return response()->json([
             'message'  => 'Activity created',
             'activity' => $activityWithUser
-        ], 201);
+        ], 200);
     }
 
     /**
