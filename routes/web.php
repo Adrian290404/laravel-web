@@ -21,5 +21,6 @@ Route::middleware('auth')->group(function () {
 Route::resource('activities', ActivityController::class);
 
 Route::get('/activities', [ActivityController::class, 'index'])->name('activities.index');
+Route::get('/activities/{id}', [ActivityController::class, 'show'])->name('activities.show');
 
 require __DIR__.'/auth.php';

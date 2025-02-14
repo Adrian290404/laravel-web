@@ -55,7 +55,8 @@ class ActivityController extends Controller
     public function show($id)
     {
         $activity = Activity::with('user')->findOrFail($id);
-        return response()->json($activity);
+        // return response()->json($activity);
+        return view('activities.show', compact('activity'));
     }
 
     /**

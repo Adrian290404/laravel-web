@@ -17,6 +17,7 @@ th {
 
 td {
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 tr:nth-child(even) td {
