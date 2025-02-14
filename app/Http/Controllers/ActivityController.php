@@ -96,9 +96,15 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        $activity = Auth::user()->activities()->findOrFail($id);
+        $activity = Activity::findOrFail($id);
+    
+        $deletedActivity = $activity->toArray();
+    
         $activity->delete();
-
-        return response()->json(['message' => 'Activity destroyed']);
+    
+        return response()->json([
+            'message'  => 'Activity deleted successfully',
+            'activity' => $deletedActivity
+        ], 200);
     }
 }
