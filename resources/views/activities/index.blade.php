@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <title>Activities</title>
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <ul>
         <div class="container">
-            <h1>List of Activities</h1>
+            <h1>Activities</h1>
+            <h2>Options:</h2>
+            <div class="create" onclick="window.location.href='{{ route('activities.create') }}'">
+                <i class="fa-solid fa-circle-plus"></i> 
+                <p>Create new activity</p>
+            </div>
 
-            @if(session('success'))
-                <div class="alert alert-success">{{ session('success') }}</div>
-            @endif
-
-            <table class="table table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>ID</th>

@@ -27,3 +27,36 @@ tr:nth-child(even) td {
 tr:hover td {
     background-color: #f1f1f1;
 }
+
+.create {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.create:active {
+    transform: translateY(0);
+}
+
+.create i {
+    font-size: 1.2em;
+}
+
+.create p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
