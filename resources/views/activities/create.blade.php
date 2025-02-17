@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Crear Nueva Actividad</title>
+    <title>Create new activity</title>
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Crear Nueva Actividad</h1>
+        <h1>Create new activity</h1>
         <form action="{{ route('activities.store') }}" method="POST">
             @csrf
 

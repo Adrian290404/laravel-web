@@ -61,7 +61,8 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        return response()->json(['message' => "Formulario de edición para la actividad $id"]);
+        $activity = Activity::with('user')->findOrFail($id);
+        return view('activities.edit', compact('activity'));
     }
 
     /**
@@ -79,15 +80,9 @@ class ActivityController extends Controller
         ]);
     
         $activity = Activity::findOrFail($id);
-    
         $activity->update($validatedData);
     
-        $activityWithUser = Activity::with('user')->find($activity->id);
-    
-        return response()->json([
-            'message'  => 'Activity updated',
-            'activity' => $activityWithUser
-        ], 200);
+        return redirect()->route('activities.index')->with('success', 'Activity updated correctly.');
     }
 
     /**
@@ -101,9 +96,6 @@ class ActivityController extends Controller
     
         $activity->delete();
     
-        return response()->json([
-            'message'  => 'Activity deleted successfully',
-            'activity' => $deletedActivity
-        ], 200);
+        return redirect()->route('activities.index')->with('success', 'Activity destroyed succesfully.');
     }
 }

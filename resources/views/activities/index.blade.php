@@ -10,12 +10,13 @@
     <ul>
         <div class="container">
             <h1>Activities</h1>
-            <h2>Options:</h2>
-            <div class="create" onclick="window.location.href='{{ route('activities.create') }}'">
-                <i class="fa-solid fa-circle-plus"></i> 
-                <p>Create new activity</p>
+            <div class="buttons">
+                <div class="create" onclick="window.location.href='{{ route('activities.create') }}'">
+                    <i class="fa-solid fa-circle-plus"></i> 
+                    <p>Create new activity</p>
+                </div>
             </div>
-
+            <h2>List</h2>
             <table>
                 <thead>
                     <tr>
