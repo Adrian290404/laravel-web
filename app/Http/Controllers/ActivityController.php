@@ -31,7 +31,7 @@ class ActivityController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'type' => 'required|in:surf,windsurf,kayak,atv,hot air ballon',
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
             'user_id' => 'required|exists:users,id',
             'datetime' => 'required|date',
             'paid' => 'required|boolean',
@@ -43,10 +43,7 @@ class ActivityController extends Controller
     
         $activityWithUser = Activity::with('user')->find($activity->id);
     
-        return response()->json([
-            'message'  => 'Activity created',
-            'activity' => $activityWithUser
-        ], 200);
+        return redirect()->route('activities.index')->with('success', 'Activity created successfully.');
     }
 
     /**
@@ -73,7 +70,7 @@ class ActivityController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'type' => 'required|in:surf,windsurf,kayak,atv,hot air ballon',
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
             'user_id' => 'required|exists:users,id',
             'datetime' => 'required|date',
             'paid' => 'required|boolean',
