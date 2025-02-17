@@ -47,7 +47,7 @@
                 <i class="fa-solid fa-pen-to-square"></i> Editar actividad
             </a>
             
-            <form action="{{ route('activities.destroy', $activity->id) }}" method="POST" onsubmit="return confirm('¿Está seguro de que desea eliminar esta actividad?');" style="display:inline;">
+            <form action="{{ route('activities.destroy', $activity->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this activity?');" style="display:inline;">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="delete-btn">
