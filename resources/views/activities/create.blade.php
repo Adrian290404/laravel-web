@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Create new activity</title>
-    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/createAndShow.css') }}">
 </head>
 <body>
     <div class="container">
