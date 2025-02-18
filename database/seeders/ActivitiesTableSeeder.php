@@ -13,6 +13,6 @@ class ActivitiesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Activity::factory()->count(10)->create();
+        Activity::factory(30)->create();
     }
 }
