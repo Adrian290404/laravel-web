@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -11,7 +12,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Room::all();
+        return view('hotel.rooms', compact('rooms'));
     }
 
     /**
@@ -33,15 +35,16 @@ class RoomController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $room = Room::findOrFail($id);
+        return view('hotel.roomDetails', compact('room'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
     }
@@ -49,7 +52,7 @@ class RoomController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -57,7 +60,7 @@ class RoomController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
     }
