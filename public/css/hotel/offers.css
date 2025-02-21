@@ -1,0 +1,414 @@
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.introduction {
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 4em 1em 0 1em;
+}
+.introduction__up {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.125rem;
+}
+.introduction__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.0625rem;
+  margin: 0.3em 0 0.5em 0;
+}
+.introduction__container {
+  text-align: right;
+  display: block;
+}
+.introduction__container__page-marker {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  letter-spacing: 0.48px;
+  padding: 1em 2em;
+  display: inline-block;
+}
+.introduction__container__page-marker--marked {
+  color: #BEAD8E;
+  padding: 0;
+}
+@media only screen and (min-width: 1000px) {
+  .introduction {
+    padding: 7% 15% 0 15%;
+  }
+  .introduction__up {
+    font-size: 0.875rem;
+    line-height: 0.9375rem;
+  }
+  .introduction__title {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.125rem;
+    margin: 0.3em 0;
+    width: 60%;
+  }
+  .introduction__container {
+    margin-right: 2%;
+  }
+}
+
+.offers__offert {
+  margin-top: 3em;
+  padding: 0 1em;
+}
+.offers__offert__image-container {
+  position: relative;
+}
+.offers__offert__image-container__image {
+  width: 100%;
+}
+.offers__offert__content {
+  position: relative;
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1019607843);
+  padding: 1em 1em 2em 1em;
+}
+.offers__offert__content__golden-line {
+  display: none;
+}
+.offers__offert__content__up {
+  color: #777777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+.offers__offert__content__title {
+  color: #222222;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.0625rem;
+  letter-spacing: -0.0625rem;
+  margin: 0.4em 0;
+}
+.offers__offert__content__price-container {
+  position: absolute;
+  z-index: 1;
+  top: -2.5%;
+  right: 0;
+}
+.offers__offert__content__price-container__prev-price-container {
+  position: absolute;
+  right: 1.8em;
+  bottom: 3.5em;
+}
+.offers__offert__content__price-container__prev-price-container__previous-price {
+  display: inline;
+  color: #BEAD8E;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 1.4375rem;
+  line-height: 1.5625rem;
+  text-decoration: line-through;
+}
+.offers__offert__content__price-container__prev-price-container__previous-price--little {
+  color: #BEAD8E;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 0.6875rem;
+  line-height: 0.6875rem;
+  text-decoration: line-through;
+}
+.offers__offert__content__price-container__current-price {
+  position: absolute;
+  right: 1em;
+  bottom: 0.5em;
+  color: #DE5777;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2rem;
+}
+.offers__offert__content__price-container__current-price--little {
+  font-size: 0.75rem;
+  line-height: 0.8125rem;
+}
+.offers__offert__content__grey-line {
+  display: none;
+}
+.offers__offert__content__information__left__description {
+  color: #777777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  width: 86%;
+}
+.offers__offert__content__information__right__container {
+  position: relative;
+  margin: 1em 0;
+}
+.offers__offert__content__information__right__container__left {
+  color: #777777;
+  list-style-type: none;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 3rem;
+}
+.offers__offert__content__information__right__container__right {
+  color: #777777;
+  list-style-type: none;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 2.5em;
+}
+.offers__offert__content__button {
+  display: block;
+  color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.125rem;
+  padding: 1.5em 4.5em;
+  background-color: #BEAD8E;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .offers__offert {
+    width: 69%;
+    margin: 4em auto 4em auto;
+  }
+  .offers__offert__image-container {
+    position: relative;
+  }
+  .offers__offert__image-container__image {
+    width: 100%;
+  }
+  .offers__offert__content {
+    position: relative;
+    width: 90%;
+    margin: -2em auto 0 auto;
+    background-color: #FFFFFF;
+    padding: 3em;
+  }
+  .offers__offert__content__golden-line {
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #BEAD8E;
+    margin-bottom: 2em;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .offers__offert__content__price-container {
+    position: absolute;
+    z-index: 1;
+    top: 8.7em;
+    right: 0.5em;
+  }
+  .offers__offert__content__price-container__prev-price-container {
+    right: 2.5em;
+    bottom: 5em;
+  }
+  .offers__offert__content__price-container__prev-price-container__previous-price {
+    font-size: 1.875rem;
+    line-height: 2rem;
+    text-decoration: line-through;
+  }
+  .offers__offert__content__price-container__prev-price-container__previous-price--little {
+    font-size: 0.75rem;
+    line-height: 0.8125rem;
+  }
+  .offers__offert__content__price-container__current-price {
+    font-size: 2.5rem;
+    line-height: 2.6875rem;
+  }
+  .offers__offert__content__price-container__current-price--little {
+    font-size: 1rem;
+    line-height: 1.0625rem;
+  }
+  .offers__offert__content__grey-line {
+    display: block;
+    width: 100%;
+    margin: 1.5em 0 2em 0;
+    border-top: 2px solid #ECECEC;
+  }
+  .offers__offert__content__information {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .offers__offert__content__information__left {
+    width: 60%;
+  }
+  .offers__offert__content__information__left__description {
+    color: #777777;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    width: 86%;
+  }
+  .offers__offert__content__information__right {
+    width: 40%;
+  }
+  .offers__offert__content__information__right__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .offers__offert__content__information__right__container__left {
+    color: #777777;
+    list-style-type: none;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+  .offers__offert__content__information__right__container__right {
+    color: #777777;
+    list-style-type: none;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+  .offers__offert__content__button {
+    margin-top: -7em;
+  }
+}
+
+.offers__popular-list {
+  margin-top: 3em;
+  padding: 2em 1em 3em 1em;
+  background-color: #222222;
+  text-align: center;
+}
+.offers__popular-list__up {
+  color: #BDAC8D;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.125rem;
+}
+.offers__popular-list__title {
+  color: #FFFFFF;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.0625rem;
+  margin: 0.4em 0 0.7em 0;
+}
+.offers__popular-list__room__container {
+  background-color: #FFFFFF;
+  padding-bottom: 2em;
+}
+.offers__popular-list__room__container__slider {
+  position: relative;
+}
+.offers__popular-list__room__container__slider__image {
+  width: 100%;
+}
+.offers__popular-list__room__container__icons {
+  position: relative;
+  padding: 0.6em 1.8em;
+  background-color: white;
+  margin-top: -1.4em;
+  z-index: 1;
+}
+.offers__popular-list__room__container__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.72px;
+  margin: 1em 0;
+}
+.offers__popular-list__room__container__description {
+  color: #777777;
+  font-family: "Roboto", sans;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  width: 90%;
+  margin: 0 auto 1em auto;
+}
+.offers__popular-list__room__container__details {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+}
+.offers__popular-list__room__container__details--price {
+  color: #BEAD8E;
+}
+.offers__popular-list__room__container__details--booking {
+  color: #BDBDBD;
+  margin-left: 1em;
+}
+
+.swiper__controller {
+  position: absolute;
+  top: 35%;
+  padding: 0.9em 1em;
+  z-index: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.swiper__controller--left {
+  left: 0;
+  background-color: #FFFFFF;
+}
+.swiper__controller--right {
+  right: 0;
+  background-color: #BDAC8D;
+}
+
+@media only screen and (min-width: 1000px) {
+  .offers__popular-list {
+    padding: 3em 18% 5em 18%;
+    margin-bottom: 6em;
+  }
+  .offers__popular-list__title {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.125rem;
+  }
+  .offers__popular-list__room {
+    display: flex;
+    gap: 2em;
+  }
+  .offers__popular-list .swiper-wrapper {
+    gap: 2em;
+    justify-content: space-between;
+  }
+  .offers__popular-list .swiper-slide {
+    flex: 1 1 calc(33.333% - 2em);
+    max-width: calc(33.333% - 2em);
+  }
+  .offers__popular-list .swiper__controller {
+    display: none;
+  }
+}/*# sourceMappingURL=offers.css.map */
