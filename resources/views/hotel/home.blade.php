@@ -26,13 +26,13 @@
         <nav class="container__card">
             <img class="container__card__dropdown" id="dropdownOpen" src="{{ asset('img/hotel/header/icons/dropdown.png') }}">
             <img class="container__card__dropdown hidden" id="dropdownClose" src="{{ asset('img/hotel/header/icons/closeDropdown.png') }}">
-            <a class="container__card__link" href="../pages/home.html"><img class="container__card__link__logo container__card__link__logo--mobile" src="{{ asset('img/hotel/header/logo.png') }}"></a>
-            <a class="container__card__link" href="../pages/home.html"><img class="container__card__link__logo container__card__link__logo--desktop" src="{{ asset('img/hotel/header/logoDesktop.png') }}"></a>
+            <a class="container__card__link" href="{{ route('home') }}"><img class="container__card__link__logo container__card__link__logo--mobile" src="{{ asset('img/hotel/header/logo.png') }}"></a>
+            <a class="container__card__link" href="{{ route('home') }}"><img class="container__card__link__logo container__card__link__logo--desktop" src="{{ asset('img/hotel/header/logoDesktop.png') }}"></a>
             <ul class="container__card__navbar" id="navBar">
-                <a class="container__card__navbar__link" href="../pages/aboutUs.html"><li class="container__card__navbar__link__page">About Us</li></a>
-                <a class="container__card__navbar__link" href="../pages/rooms.html"><li class="container__card__navbar__link__page">Rooms</li></a>
-                <a class="container__card__navbar__link" href="../pages/offers.html"><li class="container__card__navbar__link__page">Offers</li></a>
-                <a class="container__card__navbar__link" href="../pages/contact.html"><li class="container__card__navbar__link__page">Contact</li></a>
+                <a class="container__card__navbar__link" href="{{ route('about') }}"><li class="container__card__navbar__link__page">About Us</li></a>
+                <a class="container__card__navbar__link" href="{{ route('rooms') }}"><li class="container__card__navbar__link__page">Rooms</li></a>
+                <a class="container__card__navbar__link" href="{{ route('offers') }}"><li class="container__card__navbar__link__page">Offers</li></a>
+                <a class="container__card__navbar__link" href="{{ route('contact') }}"><li class="container__card__navbar__link__page">Contact</li></a>
             </ul>
             <div class="container__card__icons">
                 <img class="container__card__icons__icon" src="{{ asset('img/hotel/header/icons/login.png') }}">

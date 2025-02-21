@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -22,9 +23,9 @@ Route::get('/activities/{id}', [ActivityController::class, 'show'])->name('activ
 Route::get('/activities/create', [ActivityController::class, 'create'])->name('activities.create');
 Route::get('/activities/edit/{id}', [ActivityController::class, 'edit'])->name('activities.edit');
 
-Route::get('/', [HotelController::class, 'home'])->name('hotel.home');
+Route::get('/', [HotelController::class, 'home'])->name('home');
 Route::get('/about', function () { return view('hotel.about'); })->name('about');
-Route::get('/contact', function () { return view('hotel.contact'); })->name('about');
+Route::get('/contact', function () { return view('hotel.contact'); })->name('contact');
 Route::get('/offers', function () { return view('hotel.offers');})->name('offers');
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 Route::get('/roomDetails', [RoomController::class, 'show'])->name('roomDetails');
