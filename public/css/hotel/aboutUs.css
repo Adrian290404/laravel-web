@@ -1,0 +1,435 @@
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.introduction {
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 4em 1em 0 1em;
+}
+.introduction__up {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.125rem;
+}
+.introduction__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.0625rem;
+  margin: 0.3em 0 0.5em 0;
+}
+.introduction__container {
+  text-align: right;
+  display: block;
+}
+.introduction__container__page-marker {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.0625rem;
+  letter-spacing: 0.48px;
+  padding: 1em 2em;
+  display: inline-block;
+}
+.introduction__container__page-marker--marked {
+  color: #BEAD8E;
+  padding: 0;
+}
+@media only screen and (min-width: 1000px) {
+  .introduction {
+    padding: 7% 15% 0 15%;
+  }
+  .introduction__up {
+    font-size: 0.875rem;
+    line-height: 0.9375rem;
+  }
+  .introduction__title {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.125rem;
+    margin: 0.3em 0;
+    width: 60%;
+  }
+  .introduction__container {
+    margin-right: 2%;
+  }
+}
+
+.about-us__counter {
+  padding: 4em 1em 2em 1em;
+}
+.about-us__counter__up {
+  color: #777777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-align: left;
+}
+.about-us__counter__title {
+  color: #222222;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.0625rem;
+  margin: 0.4em 0 0.9em 0;
+}
+.about-us__counter__facts-container__fact {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: space-evenly;
+  margin-bottom: 3.5em;
+}
+.about-us__counter__facts-container__fact__image {
+  width: 4em;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-us__counter__facts-container__fact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+}
+.about-us__counter__facts-container__fact__content__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.0625rem;
+}
+.about-us__counter__facts-container__fact__content__description {
+  color: #777777;
+  font-family: "Roboto", sans;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.about-us__counter__slider {
+  text-align: center;
+}
+.about-us__counter__slider__image-container {
+  flex: 1;
+}
+.about-us__counter__slider__image-container__image {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 1000px) {
+  .about-us__counter {
+    padding: 4em 1em 2em 1em;
+    width: 68.5%;
+    margin: 0 auto;
+  }
+  .about-us__counter__title {
+    font-size: 5rem;
+    line-height: 6.125rem;
+    letter-spacing: -0.125rem;
+  }
+  .about-us__counter__facts-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+  .about-us__counter__facts-container__fact {
+    gap: 2em;
+  }
+  .about-us__counter__slider {
+    display: flex;
+    gap: 2em;
+  }
+  .about-us__counter__slider__image-container {
+    flex: 1;
+  }
+  .about-us__counter__slider__image-container__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #AD9D82 !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  .about-us__counter__slider {
+    display: block;
+  }
+  .about-us__counter__slider .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .about-us__counter__slider .swiper-slide {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+.about-us__facilities {
+  background-color: #222222;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4em 1em 2.5em 1em;
+}
+.about-us__facilities__up {
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+.about-us__facilities__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.0625rem;
+  margin: 0.4em 0;
+}
+.about-us__facilities__container {
+  text-align: left;
+}
+.about-us__facilities__container__content {
+  width: 100%;
+  height: 100%;
+  background-color: #292929;
+  padding: 0 1em 4em 1em;
+}
+.about-us__facilities__container__content__number {
+  color: #222222;
+  font-family: "Archivo", sans-serif;
+  font-size: 7.5rem;
+  line-height: 8.125rem;
+  font-weight: 700;
+  text-align: right;
+}
+.about-us__facilities__container__content__icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: -2.5em auto 3em 0;
+}
+.about-us__facilities__container__content__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  letter-spacing: -0.9px;
+}
+.about-us__facilities__container__content__description {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  width: 80%;
+  margin: 2em 0 0 0;
+}
+@media only screen and (min-width: 1000px) {
+  .about-us__facilities__title {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.125rem;
+  }
+  .about-us__facilities__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    max-width: 85em;
+    margin: 0 auto;
+  }
+  .about-us__facilities__container__content {
+    max-width: 25em;
+    flex: 1 1 25em;
+    box-sizing: border-box;
+    display: block;
+    padding-left: 5em;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #AD9D82 !important;
+}
+
+.about-us__general-info {
+  padding: 3.5em 1em;
+  text-align: center;
+}
+.about-us__general-info__video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.about-us__general-info__video-container__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.about-us__general-info__description {
+  color: #222222;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4375rem;
+  letter-spacing: -0.0625rem;
+  margin: 1.2em 0;
+}
+.about-us__general-info__icons-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.about-us__general-info__icons-text__container {
+  padding: 10% 0;
+  text-align: center;
+  width: 45%;
+  align-content: center;
+}
+.about-us__general-info__icons-text__container__text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  letter-spacing: 0.125rem;
+  margin-top: 1em;
+}
+.about-us__general-info__icons-text__container--marked {
+  background-color: #BEAD8E;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 1000px) {
+  .about-us__general-info__video-container {
+    width: 68.5%;
+    padding-top: 39.9%;
+    margin: 0 auto;
+  }
+  .about-us__general-info__description {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+    letter-spacing: -0.125rem;
+    width: 68.5%;
+    margin: 0.6em auto;
+  }
+  .about-us__general-info__icons-text {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  .about-us__general-info__icons-text__container {
+    padding: 2em 1em;
+    width: 11%;
+  }
+}
+
+.about-us__restaurant {
+  padding: 1em 0 4em 0;
+}
+.about-us__restaurant__container {
+  padding: 1em;
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1019607843);
+}
+.about-us__restaurant__container__left__image {
+  width: 100%;
+}
+.about-us__restaurant__container__right__up {
+  color: #777777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-align: left;
+  margin: 2.5em 0;
+}
+.about-us__restaurant__container__right__title {
+  color: #222222;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.0625rem;
+  letter-spacing: -0.0625rem;
+}
+.about-us__restaurant__container__right__description {
+  color: #777777;
+  font-family: "Archivo", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  margin: 2em 0;
+  width: 90%;
+}
+.about-us__restaurant__container__right__button {
+  display: block;
+  color: #FFFFFF;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.125rem;
+  padding: 1.5em 3.5em;
+  background-color: #BEAD8E;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1000px) {
+  .about-us__restaurant__container {
+    width: 68.5%;
+    margin: 0 auto;
+    padding: 0 2em 2em 2em;
+    display: flex;
+    gap: 3em;
+  }
+  .about-us__restaurant__container__left {
+    flex: 1;
+  }
+  .about-us__restaurant__container__left__image {
+    width: 100%;
+  }
+  .about-us__restaurant__container__right {
+    flex: 1;
+  }
+  .about-us__restaurant__container__right__title {
+    font-size: 3rem;
+    line-height: 3.6875rem;
+  }
+}/*# sourceMappingURL=aboutUs.css.map */

@@ -24,7 +24,7 @@ Route::get('/activities/create', [ActivityController::class, 'create'])->name('a
 Route::get('/activities/edit/{id}', [ActivityController::class, 'edit'])->name('activities.edit');
 
 Route::get('/', [HotelController::class, 'home'])->name('home');
-Route::get('/about', function () { return view('hotel.about'); })->name('about');
+Route::get('/about', function () { return view('hotel.aboutUs'); })->name('about');
 Route::get('/contact', function () { return view('hotel.contact'); })->name('contact');
 Route::get('/offers', [HotelController::class, 'offers'])->name('offers');
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
