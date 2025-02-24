@@ -152,7 +152,10 @@ body {
   }
   .about-us__counter__slider {
     display: flex;
-    gap: 2em;
+  }
+  .about-us__counter__slider .swiper-wrapper {
+    justify-content: center;
+    gap: 0.5em;
   }
   .about-us__counter__slider__image-container {
     flex: 1;
