@@ -43,33 +43,34 @@
             <img class="contact__details-container__image" src="{{ asset('img/hotel/contact/empty/rectangle.png') }}">
         </section>
         <section class="contact__form-container">
-            <form class="contact__form-container__form">
+            <form class="contact__form-container__form" method="POST" action="{{ route('contact.store') }}">
+                @csrf
                 <div class="flex">
                     <div class="contact__form-container__form__input-container">
                         <img class="contact__form-container__form__input-container__icon" src="{{ asset('img/hotel/contact/icons/name.png') }}">
-                        <input class="contact__form-container__form__input-container__input" type="text" placeholder="Your full name">
+                        <input class="contact__form-container__form__input-container__input" type="text" name="name" placeholder="Your full name">
                     </div>
                     <div class="contact__form-container__form__input-container">
                         <img class="contact__form-container__form__input-container__icon" src="{{ asset('img/hotel/contact/icons/phone.png') }}">
-                        <input class="contact__form-container__form__input-container__input" type="text" placeholder="Add phone number">
+                        <input class="contact__form-container__form__input-container__input" type="text" name="phone" placeholder="Add phone number">
                     </div>
                 </div>
                 <div class="flex">
                     <div class="contact__form-container__form__input-container">
                         <img class="contact__form-container__form__input-container__icon" src="{{ asset('img/hotel/contact/icons/email.png') }}">
-                        <input class="contact__form-container__form__input-container__input" type="text" placeholder="Enter email address">
+                        <input class="contact__form-container__form__input-container__input" type="text" name="email" placeholder="Enter email address">
                     </div>
                     <div class="contact__form-container__form__input-container">
                         <img class="contact__form-container__form__input-container__icon" src="{{ asset('img/hotel/contact/icons/subject.png') }}">
-                        <input class="contact__form-container__form__input-container__input" type="text" placeholder="Enter subject">
+                        <input class="contact__form-container__form__input-container__input" type="text" name="subject" placeholder="Enter subject">
                     </div>
                 </div>
                 <div class="contact__form-container__form__input-container">
                     <img class="contact__form-container__form__input-container__icon" src="{{ asset('img/hotel/contact/icons/message.png') }}">
-                    <textarea class="contact__form-container__form__input-container__input contact__form-container__form__input-container__input--textarea" placeholder="Enter message"></textarea>
+                    <textarea class="contact__form-container__form__input-container__input contact__form-container__form__input-container__input--textarea" name="message" placeholder="Enter message"></textarea>
                 </div>
+                <button class="contact__form-container__button" type="submit">SEND</button>
             </form>
-            <button class="contact__form-container__button">SEND</button>
         </section>
     </main>
 @endsection

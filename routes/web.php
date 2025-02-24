@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -29,5 +30,7 @@ Route::get('/contact', function () { return view('hotel.contact'); })->name('con
 Route::get('/offers', [HotelController::class, 'offers'])->name('offers');
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 Route::get('/roomDetails', [RoomController::class, 'show'])->name('roomDetails');
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 require __DIR__.'/auth.php';
