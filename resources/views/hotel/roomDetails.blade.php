@@ -23,12 +23,12 @@
                 <div class="room-details__bed__separator__left">
                     <div class="room-details__bed__separator__left__title-container">
                         <div>
-                            <h2 class="room-details__bed__separator__left__title-container__up">DOUBLE BED</h2>
-                            <h1 class="room-details__bed__separator__left__title-container__title">Luxury Double Bed</h1>
+                            <h2 class="room-details__bed__separator__left__title-container__up">{{ $room->room_name }}</h2>
+                            <h1 class="room-details__bed__separator__left__title-container__title">Bed type: {{ $room->bed_type }}</h1>
                         </div>
-                        <p class="room-details__bed__separator__left__title-container__price">$345<span class="room-details__bed__separator__left__title-container__price--little">/Night</span></p>
+                        <p class="room-details__bed__separator__left__title-container__price">${{ $room->rate }}<span class="room-details__bed__separator__left__title-container__price--little">/Night</span></p>
                     </div>
-                    <img class="room-details__bed__separator__left__image" src="{{ asset('img/hotel/roomDetails/empty/rectangle.png') }}">
+                    <img class="room-details__bed__separator__left__image" src="{{ $room->image }}">
                 </div>
                 <div class="room-details__bed__separator__right">
                     <h4 class="room-details__bed__separator__right__form-title">Check Availability</h4>
