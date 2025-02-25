@@ -29,7 +29,7 @@ Route::get('/about', function () { return view('hotel.aboutUs'); })->name('about
 Route::get('/contact', function () { return view('hotel.contact'); })->name('contact');
 Route::get('/offers', [HotelController::class, 'offers'])->name('offers');
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
-Route::get('/roomDetails', [RoomController::class, 'show'])->name('roomDetails');
+Route::get('/rooms/{id}', [RoomController::class, 'show'])->name('roomDetails');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 

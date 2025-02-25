@@ -73,6 +73,7 @@ body {
 .rooms__rooms-info__room {
   text-align: center;
   padding: 0 0 3em 0;
+  cursor: pointer;
 }
 .rooms__rooms-info__room__image {
   width: 100%;

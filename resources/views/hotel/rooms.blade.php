@@ -17,7 +17,7 @@
         </section>
         <section class="rooms__rooms-info">
             @foreach ($rooms as $room)
-                <article class="rooms__rooms-info__room">
+            <article class="rooms__rooms-info__room" onclick="window.location.href='{{ route('roomDetails', $room->id) }}'">
                     <img class="rooms__rooms-info__room__image" src="{{ $room->image }}">
                     <img class="rooms__rooms-info__room__icons" src="{{ asset('img/hotel/home/icons/roomIcons.png') }}">
                     <h3 class="rooms__rooms-info__room__title">{{ $room->room_name }}</h3>
