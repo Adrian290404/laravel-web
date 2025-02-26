@@ -15,9 +15,18 @@
                 <h3 class="introduction__container__page-marker">Home | <span class="introduction__container__page-marker introduction__container__page-marker--marked">Rooms</span></h3>
             </div>
         </section>
+
+        @if(isset($dates))
+            <h2 class="text">Available rooms between {{ $dates['start']->format('F j, Y') }} and {{ $dates['end']->format('F j, Y') }}</h2>
+        @endif
+
+        @if($rooms->isEmpty())
+            <h2 class="text">No rooms found between the selected dates.</h2>
+        @endif
+
         <section class="rooms__rooms-info">
             @foreach ($rooms as $room)
-            <article class="rooms__rooms-info__room" onclick="window.location.href='{{ route('hotel.roomDetails', $room->id) }}'">
+                <article class="rooms__rooms-info__room" onclick="window.location.href='{{ route('hotel.roomDetails', $room->id) }}'">
                     <img class="rooms__rooms-info__room__image" src="{{ $room->image }}">
                     <img class="rooms__rooms-info__room__icons" src="{{ asset('img/hotel/home/icons/roomIcons.png') }}">
                     <h3 class="rooms__rooms-info__room__title">{{ $room->room_name }}</h3>

@@ -4,16 +4,38 @@ namespace App\Http\Controllers;
 
 use App\Models\Room;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class RoomController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $rooms = Room::all();
-        return view('hotel.rooms', compact('rooms'));
+        $dates = null;
+        
+        if ($request->has(['date-start', 'date-end']) && $request->input('date-start') && $request->input('date-end')) {
+            try {
+                $dateStart = Carbon::parse($request->input('date-start'));
+                $dateEnd   = Carbon::parse($request->input('date-end'));
+                $dates = [
+                    'start' => $dateStart,
+                    'end'   => $dateEnd,
+                ];
+            } 
+            catch (\Exception $e) {
+                return redirect()->back()->with('error', 'Formato de fecha inválido.');
+            }
+            $rooms = Room::where('avaiable', true)->whereDoesntHave('bookings', function($query) use ($dateStart, $dateEnd) {
+                $query->where('check_in', '<', $dateEnd)->where('check_out', '>', $dateStart);
+            })->get();
+        } 
+        else {
+            $rooms = Room::all();
+        }
+
+        return view('hotel.rooms', compact('rooms', 'dates'));
     }
 
     /**

@@ -70,6 +70,16 @@ body {
 .rooms__rooms-info {
   padding: 3em 1em;
 }
+.text {
+  color: #777777;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.125rem;
+  margin: 2em 0 0 0;
+  padding: 0 1.5em;
+}
 .rooms__rooms-info__room {
   text-align: center;
   padding: 0 0 3em 0;
@@ -145,13 +155,17 @@ body {
   background-color: #BEAD8E;
 }
 @media only screen and (min-width: 1000px) {
+  .text {
+    width: 69%;
+    margin: 2em auto 0 auto;
+  }
   .rooms__rooms-info {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
     width: 69%;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: start;
   }
   .rooms__rooms-info__room {
     flex: 1 1 calc(33.333% - 2em);

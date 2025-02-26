@@ -9,6 +9,7 @@
     <script src="{{ asset('js/hotel/home/roomsSwiper.js') }}" defer></script>
     <script src="{{ asset('js/hotel/home/facilitiesSwiper.js') }}" defer></script>
     <script src="{{ asset('js/hotel/home/menuSwiper.js') }}" defer></script>
+    <script src="{{ asset('js/hotel/home/formValidation.js') }}" defer></script>
 @endsection
 
 @section('content')
@@ -20,23 +21,35 @@
             <button class="home__introduction__button">LEARN MORE</button>
         </section>
         <section class="home__calendar">
-            <form class="home__calendar__form">
+            <form class="home__calendar__form" action="{{ route('rooms') }}" method="GET" onsubmit="return validateDates()">
                 <div class="home__calendar__form__container">
                     <label class="home__calendar__form__container__label" for="date-start">Arrival Date</label>
                     <div class="home__calendar__form__container__input-container">
                         <img class="home__calendar__form__container__input-container__icon" src="{{ asset('img/hotel/home/icons/calendar.png') }}">
-                        <input class="home__calendar__form__container__input-container__input" type="text" id="date-start" name="date-start" placeholder="24th march 2020">
+                        <input 
+                            class="home__calendar__form__container__input-container__input" 
+                            type="date" 
+                            id="date-start" 
+                            name="date-start" 
+                            required
+                        >
                     </div>
                 </div>
                 <div class="home__calendar__form__container">
                     <label class="home__calendar__form__container__label" for="date-end">Departure Date:</label>
                     <div class="home__calendar__form__container__input-container">
                         <img class="home__calendar__form__container__input-container__icon" src="{{ asset('img/hotel/home/icons/calendar.png') }}">
-                        <input class="home__calendar__form__container__input-container__input" type="text" id="date-end" name="date-end" placeholder="30th march 2020">
+                        <input 
+                            class="home__calendar__form__container__input-container__input" 
+                            type="date" 
+                            id="date-end" 
+                            name="date-end" 
+                            required
+                        >
                     </div>
                 </div>
                 <button class="home__calendar__form__button" type="submit">CHECK AVAILABILITY</button>
-            </form>
+            </form>          
         </section>
         <section class="home__about-us">
             <article class="home__about-us__introduction">
