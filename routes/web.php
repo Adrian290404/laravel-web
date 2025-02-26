@@ -30,6 +30,7 @@ Route::get('/contact', function () { return view('hotel.contact'); })->name('con
 Route::get('/offers', [HotelController::class, 'offers'])->name('offers');
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 Route::get('/rooms/{id}', [RoomController::class, 'show'])->name('hotel.roomDetails');
+Route::post('/rooms/{room}/availability', [RoomController::class, 'checkAvailability'])->name('rooms.availability');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 

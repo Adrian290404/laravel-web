@@ -86,4 +86,24 @@ class RoomController extends Controller
     {
         //
     }
+
+    public function checkAvailability(Request $request, Room $room)
+    {
+        $startDate = $request->input('date-start');
+        $endDate = $request->input('date-end');
+    
+        if (!$startDate || !$endDate) {
+            return redirect()->back()->with('error', 'You must provide a start date and an end date.');
+        }
+    
+        $isAvailable = !$room->bookings()->where(function ($query) use ($startDate, $endDate) {
+            $query->where('check_in', '<=', $endDate)
+                  ->where('check_out', '>=', $startDate);
+        })->exists();
+    
+        $message = $isAvailable ? 'The room is available.' : 'The room is not available';
+        $status = $isAvailable ? 'success' : 'error';
+    
+        return redirect()->back()->with($status, $message);
+    }
 }

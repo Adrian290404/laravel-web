@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="{{ asset('js/hotel/roomDetails/relatedRoomsSwiper.js') }}" defer></script>
+    <script src="{{ asset('js/hotel/roomDetails/formValidation.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endsection
 
 @section('content')
@@ -26,29 +28,42 @@
                             <h2 class="room-details__bed__separator__left__title-container__up">{{ $room->room_name }}</h2>
                             <h1 class="room-details__bed__separator__left__title-container__title">Bed type: {{ $room->bed_type }}</h1>
                         </div>
-                        <p class="room-details__bed__separator__left__title-container__price">${{ $room->rate }}<span class="room-details__bed__separator__left__title-container__price--little">/Night</span></p>
+                        <p class="room-details__bed__separator__left__title-container__price">
+                            ${{ $room->rate }}<span class="room-details__bed__separator__left__title-container__price--little">/Night</span>
+                        </p>
                     </div>
-                    <img class="room-details__bed__separator__left__image" src="{{ $room->image }}">
+                    <img class="room-details__bed__separator__left__image" src="{{ $room->image }}" alt="Room Image">
                 </div>
                 <div class="room-details__bed__separator__right">
                     <h4 class="room-details__bed__separator__right__form-title">Check Availability</h4>
-                    <form class="room-details__bed__separator__right__form">
+                    <form class="room-details__bed__separator__right__form" id="availability-form" action="{{ route('rooms.availability', ['room' => $room->id]) }}" method="POST">
+                        @csrf
                         <label class="room-details__bed__separator__right__form__label" for="date-start">Check in:</label>
                         <div class="room-details__bed__separator__right__form__input-container">
-                            <input class="room-details__bed__separator__right__form__input-container__input" type="text" id="date-start" name="date-start" placeholder="Fri, 14th June 2020">
-                            <img class="room-details__bed__separator__right__form__input-container__icon" src="{{ asset('img/hotel/roomDetails/icons/calendar.png') }}">
+                            <input class="room-details__bed__separator__right__form__input-container__input" 
+                                type="date" 
+                                id="date-start" 
+                                name="date-start" 
+                                required>
+                            <img class="room-details__bed__separator__right__form__input-container__icon" src="{{ asset('img/hotel/roomDetails/icons/calendar.png') }}" alt="Calendar Icon">
                         </div>
                         <label class="room-details__bed__separator__right__form__label" for="date-end">Check out:</label>
                         <div class="room-details__bed__separator__right__form__input-container">
-                            <input class="room-details__bed__separator__right__form__input-container__input" type="text" id="date-end" name="date-end" placeholder="Sun, 16th June 2020">
-                            <img class="room-details__bed__separator__right__form__input-container__icon" src="{{ asset('img/hotel/roomDetails/icons/calendar.png') }}">
+                            <input class="room-details__bed__separator__right__form__input-container__input" 
+                                type="date" 
+                                id="date-end" 
+                                name="date-end" 
+                                required>
+                            <img class="room-details__bed__separator__right__form__input-container__icon" src="{{ asset('img/hotel/roomDetails/icons/calendar.png') }}" alt="Calendar Icon">
                         </div>
                         <button class="room-details__bed__separator__right__form__button" type="submit">CHECK AVAILABILITY</button>
                     </form>
                 </div>
             </div>
-            <p class="room-details__bed__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-        </section>
+            <p class="room-details__bed__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+            </p>
+        </section>        
         <section class="room-details__amenities">
             <h2 class="room-details__amenities__title">Amenities</h2>
             <hr class="room-details__amenities__line">            
