@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Contact;
+use App\Mail\ContactMail;
 
 class ContactController extends Controller
 {
@@ -36,6 +38,9 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
         Contact::create($data);
+
+        Mail::to($data['email'])->send(new ContactMail($data));
+
         return redirect()->back()->with('success', 'Message sent!');
     }
 
