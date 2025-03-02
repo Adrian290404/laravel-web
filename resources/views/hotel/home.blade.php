@@ -56,7 +56,7 @@
                 <h2 class="home__about-us__introduction__up">ABOUT US</h2>
                 <div class="home__about-us__introduction__container">
                     <h1 class="home__about-us__introduction__container__title">Discover Our Underground.</h1>
-                    <p class="home__about-us__introduction__container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="home__about-us__introduction__container__description">Experience unparalleled hospitality in our unique underground venue. Our dedicated team is committed to excellence, ensuring every moment is memorable and every detail is perfectly executed.</p>
                     <button class="home__about-us__introduction__container__button">BOOK NOW</button>
                 </div>
             </article>
@@ -67,7 +67,7 @@
                         <img class="home__about-us__pictures__strong-team__container__icon" src="{{ asset('img/hotel/home/icons/strongTeam.png') }}">
                         <img class="home__about-us__pictures__strong-team__container__iconbg" src="{{ asset('img/hotel/home/strongTeamBg.png') }}">
                         <h2 class="home__about-us__pictures__strong-team__container__title">Strong Team</h2>
-                        <p class="home__about-us__pictures__strong-team__container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <p class="home__about-us__pictures__strong-team__container__description">Our team is our strongest asset. With passion, expertise, and commitment, we work together to create memorable experiences for our guests.</p>
                     </div>
                 </div>
                 <div class="home__about-us__pictures__luxury-room">
@@ -75,7 +75,7 @@
                     <div class="home__about-us__pictures__luxury-room__container">
                         <img class="home__about-us__pictures__luxury-room__container__icon" src="{{ asset('img/hotel/home/icons/luxuryRoom.png') }}">
                         <h2 class="home__about-us__pictures__luxury-room__container__title">Luxury Room</h2>
-                        <p class="home__about-us__pictures__luxury-room__container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <p class="home__about-us__pictures__luxury-room__container__description">Indulge in the elegance of our luxury rooms, where every detail is designed to provide comfort and style.</p>
                     </div>
                 </div>
             </article>
@@ -114,7 +114,7 @@
         <section class="home__intro-video">
             <h2 class="home__intro-video__up">INTRO VIDEO</h2>
             <h1 class="home__intro-video__title">Meet Witch Our Luxury Place.</h1>
-            <p class="home__intro-video__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand this.</p>
+            <p class="home__intro-video__description">Discover the elegance and sophistication of our exclusive space. This video takes you through every detail of our luxury venue, showcasing innovation and refined style.</p>
             <div class="home__intro-video__gold-bg"></div>
             <div class="home__intro-video__video-container">
                 <iframe 
@@ -138,7 +138,7 @@
                         <img class="home__facilities__container__content__icon" src="{{ asset('img/hotel/home/icons/rating.png') }}" alt="Rating">
                         <h3 class="home__facilities__container__content__title">Have High Rating</h3>
                         <p class="home__facilities__container__content__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            Our services consistently receive top reviews, showcasing our commitment to quality.
                         </p>
                     </div>
                     <div class="swiper-slide home__facilities__container__content">
@@ -146,7 +146,7 @@
                         <img class="home__facilities__container__content__icon" src="{{ asset('img/hotel/home/icons/hours.png') }}" alt="Hours">
                         <h3 class="home__facilities__container__content__title">Quiet Hours</h3>
                         <p class="home__facilities__container__content__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            Unwind in our calm atmosphere during designated quiet hours, perfect for relaxation.
                         </p>
                     </div>
                     <div class="swiper-slide home__facilities__container__content">
@@ -154,7 +154,7 @@
                         <img class="home__facilities__container__content__icon" src="{{ asset('img/hotel/home/icons/location.png') }}" alt="Location">
                         <h3 class="home__facilities__container__content__title">Best Locations</h3>
                         <p class="home__facilities__container__content__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            Our properties are located in prime areas, offering convenience and accessibility.
                         </p>
                     </div>
                     <div class="swiper-slide home__facilities__container__content">
@@ -162,7 +162,7 @@
                         <img class="home__facilities__container__content__icon" src="{{ asset('img/hotel/home/icons/cancellation.png') }}" alt="Cancellation">
                         <h3 class="home__facilities__container__content__title">Free Cancellation</h3>
                         <p class="home__facilities__container__content__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            Enjoy flexible booking with free cancellation, allowing changes without extra fees.
                         </p>
                     </div>
                     <div class="swiper-slide home__facilities__container__content">
@@ -170,7 +170,7 @@
                         <img class="home__facilities__container__content__icon" src="{{ asset('img/hotel/home/icons/payment.png') }}" alt="Payment">
                         <h3 class="home__facilities__container__content__title">Payment Options</h3>
                         <p class="home__facilities__container__content__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            Choose from multiple secure payment methods, designed for your convenience.
                         </p>
                     </div>
                     <div class="swiper-slide home__facilities__container__content">
@@ -178,7 +178,7 @@
                         <img class="home__facilities__container__content__icon" src="{{ asset('img/hotel/home/icons/offers.png') }}" alt="Offers">
                         <h3 class="home__facilities__container__content__title">Special Offers</h3>
                         <p class="home__facilities__container__content__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            Discover exclusive deals and promotions that provide great value on every booking.
                         </p>
                     </div>
                 </div>
@@ -195,110 +195,110 @@
                     <div class="swiper home__menu__swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Eggs & Bacon">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/baconEggs.jpg') }}" alt="Eggs & Bacon">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Eggs & Bacon</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Enjoy our signature breakfast featuring fluffy eggs paired with crispy bacon for a hearty start to your day.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Tea or Coffee">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/coffee.jpg') }}" alt="Tea or Coffee">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Tea or Coffee</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Relish a perfectly brewed cup of tea or coffee, crafted to complement your taste and energize your morning.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Chia Oatmeal">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/chia.jpg') }}" alt="Chia Oatmeal">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Chia Oatmeal</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Savor a nourishing bowl of chia oatmeal, blended with premium ingredients to fuel your day.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Fruit Parfait">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/fruit.jpg') }}" alt="Fruit Parfait">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Fruit Parfait</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Indulge in a refreshing fruit parfait layered with seasonal fruits and creamy yogurt for a burst of flavor.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Marmalade Selection">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/marmalade.jpg') }}" alt="Marmalade Selection">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Marmalade Selection</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Discover our range of tangy marmalades, ideal for adding a sweet twist to your favorite toast.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Cheese Plate">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/cheese.jpg') }}" alt="Cheese Plate">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Cheese Plate</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Experience our gourmet cheese plate, featuring an assortment of fine cheeses curated for your delight.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Fruit Parfait">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/fruit.jpg') }}" alt="Fruit Parfait">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Fruit Parfait</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Indulge in a refreshing fruit parfait layered with seasonal fruits and creamy yogurt for a burst of flavor.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Marmalade Selection">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/marmalade.jpg') }}" alt="Marmalade Selection">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Marmalade Selection</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Discover our range of tangy marmalades, ideal for adding a sweet twist to your favorite toast.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Cheese Plate">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/cheese.jpg') }}" alt="Cheese Plate">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Cheese Plate</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Experience our gourmet cheese plate, featuring an assortment of fine cheeses curated for your delight.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Eggs & Bacon">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/baconEggs.jpg') }}" alt="Eggs & Bacon">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Eggs & Bacon</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Enjoy our signature breakfast featuring fluffy eggs paired with crispy bacon for a hearty start to your day.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Tea or Coffee">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/coffee.jpg') }}" alt="Tea or Coffee">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Tea or Coffee</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Relish a perfectly brewed cup of tea or coffee, crafted to complement your taste and energize your morning.
                                     </p>
                                 </div>
                             </div>
                             <div class="swiper-slide home__menu__container__menu-container__food-container">
-                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/empty/square.png') }}" alt="Chia Oatmeal">
+                                <img class="home__menu__container__menu-container__food-container__image" src="{{ asset('img/hotel/home/chia.jpg') }}" alt="Chia Oatmeal">
                                 <div class="home__menu__container__menu-container__food-container__text">
                                     <h3 class="home__menu__container__menu-container__food-container__text__title">Chia Oatmeal</h3>
                                     <p class="home__menu__container__menu-container__food-container__text__description">
-                                    Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor.
+                                        Savor a nourishing bowl of chia oatmeal, blended with premium ingredients to fuel your day.
                                     </p>
                                 </div>
                             </div>
@@ -314,13 +314,13 @@
                 <article class="home__menu__slider swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="home__menu__slider__image" src="{{ asset('img/hotel/home/empty/bigSquare.png') }}" alt="Imagen 1">
+                            <img class="home__menu__slider__image" src="{{ asset('img/hotel/home/salad.jpg') }}" alt="Salad">
                         </div>
                         <div class="swiper-slide">
-                            <img class="home__menu__slider__image" src="{{ asset('img/hotel/home/empty/bigSquare.png') }}" alt="Imagen 2">
+                            <img class="home__menu__slider__image" src="{{ asset('img/hotel/home/burguer.jpg') }}" alt="Burguer">
                         </div>
                         <div class="swiper-slide">
-                            <img class="home__menu__slider__image" src="{{ asset('img/hotel/home/empty/bigSquare.png') }}" alt="Imagen 3">
+                            <img class="home__menu__slider__image" src="{{ asset('img/hotel/home/pizza.jpg') }}" alt="Pizza">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
