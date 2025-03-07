@@ -19,6 +19,11 @@
         <h1>CAMBIO APLICADO</h1>
         <h1>CAMBIO APLICADO</h1>
         <h1>CAMBIO APLICADO</h1>
+        <h1>CAMBIO APLICADO</h1>
+        <h1>CAMBIO APLICADO</h1>
+        <h1>CAMBIO APLICADO</h1>
+        <h1>CAMBIO APLICADO</h1>
+        <h1>CAMBIO APLICADO</h1>
         <section class="home__introduction">
             <h2 class="home__introduction__up">THE ULTIMATE LUXURY EXPERIENCE</h2>
             <h1 class="home__introduction__title">The Perfect Base For You</h1>
