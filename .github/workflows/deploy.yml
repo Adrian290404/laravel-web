@@ -18,6 +18,9 @@ jobs:
           php-version: '8.0'
           extensions: mbstring, bcmath, json, openssl
 
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader
+
       - name: Run tests
         run: php artisan test
 
