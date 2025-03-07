@@ -28,16 +28,16 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: |
+          script:
             git config --global --add safe.directory /var/www/sprint11
             cd /var/www/sprint11
             sudo mkdir -p storage/logs
             sudo mkdir -p bootstrap/cache
-            sudo chown -R www-data:www-data storage bootstrap/cache
-            sudo chmod -R 775 storage bootstrap/cache
+            sudo chown -R ubuntu:ubuntu /var/www/sprint11
+            sudo chmod -R 777 storage bootstrap/cache
             git pull origin main
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan cache:clear
             php artisan config:cache
-            php artisan route:cache
+            php artisan 
