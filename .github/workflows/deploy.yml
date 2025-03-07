@@ -29,7 +29,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script:
-            git config --global safe.directory /var/www/sprint11
             cd /var/www/sprint11
             sudo mkdir -p storage/logs
             sudo mkdir -p bootstrap/cache
