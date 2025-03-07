@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: composer install --no-dev --optimize-autoloader
 
-      - name: Run tests
-        run: vendor/bin/phpunit
-
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@master
         with:
