@@ -29,7 +29,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script:
-            git config --global --add safe.directory /var/www/sprint11
+            git config --global safe.directory /var/www/sprint11
             cd /var/www/sprint11
             sudo mkdir -p storage/logs
             sudo mkdir -p bootstrap/cache
@@ -40,4 +40,4 @@ jobs:
             php artisan migrate --force
             php artisan cache:clear
             php artisan config:cache
-            php artisan 
+            php artisan route:cache
