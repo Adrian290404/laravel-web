@@ -31,8 +31,10 @@ jobs:
           script: |
             git config --global --add safe.directory /var/www/sprint11
             cd /var/www/sprint11
-            sudo chown -R www-data:www-data storage bootstrap/cache
-            sudo chmod -R 775 storage bootstrap/cache
+            sudo mkdir -p storage/logs
+            sudo mkdir -p bootstrap/cache
+            sudo chown -R ubuntu:ubuntu /var/www/sprint11
+            sudo chmod -R 775 /var/www/sprint11/storage /var/www/sprint11/bootstrap/cache
             git pull origin main
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
