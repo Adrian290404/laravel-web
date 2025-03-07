@@ -29,7 +29,10 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            git config --global --add safe.directory /var/www/sprint11
             cd /var/www/sprint11
+            sudo chown -R ubuntu:ubuntu /var/www/sprint11
+            chmod -R 775 storage bootstrap/cache
             git pull origin main
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
