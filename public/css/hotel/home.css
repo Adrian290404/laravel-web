@@ -246,6 +246,9 @@ body {
   outline: none;
   margin-left: 0.3em;
 }
+.home__calendar__form__container__input-container__input::-webkit-calendar-picker-indicator {
+  display: none;
+}
 .home__calendar__form__button {
   display: block;
   color: #FFFFFF;
