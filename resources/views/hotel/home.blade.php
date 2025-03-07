@@ -13,7 +13,6 @@
 @endsection
 
 @section('content')
-    <h1>PRUEBA</h1>
     <main class="home">
         <section class="home__introduction">
             <h2 class="home__introduction__up">THE ULTIMATE LUXURY EXPERIENCE</h2>
