@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const dateStart = document.getElementById('date-start');
     const dateEnd   = document.getElementById('date-end');
-    const form = document.getElementById('availability-form');
 
     function getToday() {
         let today = new Date();
@@ -34,21 +33,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    form.addEventListener("submit", function(event) {
+    document.querySelector(".room-details__bed__separator__right__form").addEventListener("submit", function(event) {
         if (dateStart.value && dateEnd.value) {
             if (new Date(dateEnd.value) <= new Date(dateStart.value)) {
-                event.preventDefault();
-            } 
+                event.preventDefault(); 
+            }
         }
     });
 
-    const calendarIcons = document.querySelectorAll('.room-details__bed__separator__right__form__input-container__icon');
-    calendarIcons.forEach(function(icon) {
+    document.querySelectorAll('.room-details__bed__separator__right__form__input-container__icon').forEach(function(icon) {
         icon.addEventListener('click', function() {
-            const inputDate = this.parentElement.querySelector('input[type="date"]');
-            if (inputDate) {
-                inputDate.focus();
-                inputDate.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+            let input = icon.previousElementSibling;
+            if (typeof input.showPicker === "function") {
+                input.showPicker();
+            } 
+            else {
+                input.focus();
+                input.click();
             }
         });
     });
