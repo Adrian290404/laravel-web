@@ -20,6 +20,13 @@
             <button class="home__introduction__button home__introduction__button--gold">TAKE A TOUR</button>
             <button class="home__introduction__button">LEARN MORE</button>
         </section>
+        <h1>TEST</h1>
+        <h1>TEST</h1>
+        <h1>TEST</h1>
+        <h1>TEST</h1>
+        <h1>TEST</h1>
+        <h1>TEST</h1>
+        <h1>TEST</h1>
         <section class="home__calendar">
             <form class="home__calendar__form" action="{{ route('rooms') }}" method="GET" onsubmit="return validateDates()">
                 <div class="home__calendar__form__container">
