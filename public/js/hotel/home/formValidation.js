@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
             let input = icon.nextElementSibling;
             if (typeof input.showPicker === "function") {
                 input.showPicker();
-            } else {
+            } 
+            else {
                 input.focus();
                 input.click();
             }
