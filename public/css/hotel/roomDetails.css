@@ -247,7 +247,7 @@ body {
   margin-left: 0.3em;
 }
 .room-details__bed__separator__right__form__input-container__input::-webkit-calendar-picker-indicator {
-  display: none;
+  display: none; 
 }
 .room-details__bed__separator__right__form__button {
   width: 100%;
